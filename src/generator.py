@@ -21,7 +21,7 @@ def generate(n, l):
         print("Password {0}:\t{1}".format(i + 1, password(l))) 
 
 def password(l):
-    """This method prints a diceware password of length l.
+    """This method returns a diceware password string of l words.
     
     This method samples cryptographically secure random integers using the 
     linux coreutils shuf package.  One of the requirements for this module is 
