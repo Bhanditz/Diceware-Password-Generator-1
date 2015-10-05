@@ -5,7 +5,7 @@ This repository contains a module, generator.py, which generates Diceware passwo
 This module was written in python3 and on Ubuntu 15.04, so I recommend you run the module in that environment. The entropy generation is a combined effort from `/dev/random` and the package `haveged`. Thus, if you find a way to change those specific lines of code to work on another OS, it should work.
 
 #### How to Use ####
-1. Install the package `haveged`:
+ - Install the package `haveged`:
 ```
 $ sudo apt-get install haveged
 ```
@@ -17,10 +17,9 @@ And finally, to make sure `haveged` is configured to start on boot, run the foll
 ```
 $ update-rc.d haveged defaults
 ```
+ - Download the repository and unzip.
 
-2. Download the repository and unzip.
-
-3. Run the module. Here's an example shell session to illustrate this:
+ - Run the module. Here's an example shell session to illustrate this:
 ```
 $ python3 generator.py
 How many Diceware passwords would you like? 5
