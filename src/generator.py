@@ -11,9 +11,6 @@ from os import system
 def generate(n, l):
     """This method prints n diceware passwords of length l.
     
-    The method references the password() method for generation of diceware 
-    passwords.
-    
     :param n: the number of generated diceware passwords
     :type n: int
     :param l: the length of a diceware password
