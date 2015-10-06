@@ -84,7 +84,11 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="author.html">I. Author</a></li>
 <li class="toctree-l1"><a class="reference internal" href="purpose.html">II. The Purpose of this Module</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">III. What is Diceware?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">III. What is Diceware?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#diceware">Diceware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#entropy">Entropy</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">IV. Diceware Password Generator API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">V. License</a></li>
 </ul>
@@ -133,6 +137,16 @@
             
   <div class="section" id="iii-what-is-diceware">
 <h1>III. What is Diceware?<a class="headerlink" href="#iii-what-is-diceware" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="diceware">
+<h2>Diceware<a class="headerlink" href="#diceware" title="Permalink to this headline">¶</a></h2>
+<p><strong>Diceware</strong> is a method for creating passphrases, passwords, and other cryptographic variables using an ordinary die from a pair of dice as a hardware random number generator.</p>
+<p>For each word in the passphrase, five rolls of the dice are required. The numbers from 1 to 6 that come up in the rolls are assembled as a five-digit number, e.g. <em>43146</em>. That number is then used to look up a word in a word list. In the English list <em>43146</em> corresponds to <em>munch</em>.</p>
+</div>
+<div class="section" id="entropy">
+<h2>Entropy<a class="headerlink" href="#entropy" title="Permalink to this headline">¶</a></h2>
+<p>The bits of entropy for each word in our Diceware password can be calculated easily. The formula is of the form $log_2 (# of unique words)$.</p>
+<p>Thus, for our particular word list of approximately 354986 unique words, the entropy per word is ~18.44 bits. A Diceware passphrase consisting of 6 words can have an an entropy as much as 110.62 bits.</p>
+</div>
 </div>
 
 
