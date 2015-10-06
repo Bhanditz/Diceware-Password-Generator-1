@@ -14,3 +14,4 @@ Welcome to Diceware Password Generator's documentation!
    theory
    api
    license
+   references
