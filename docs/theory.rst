@@ -11,6 +11,9 @@ For each word in the passphrase, five rolls of the dice are required. The number
 Entropy
 -------
 
-The bits of entropy for each word in our Diceware password can be calculated easily. The formula is of the form :math:`log_2 (\# \: of \: unique \: words)`.
+The bits of entropy for each word in our Diceware password can be calculated easily. The formula is of the form:
+
+.. :math::
+   log_2 (\# \: of \: unique \: words)
 
 Thus, for our particular word list of approximately 354986 unique words, the entropy per word is ~18.44 bits. A Diceware passphrase consisting of 6 words can have an an entropy as much as ~110.62 bits!
