@@ -12,6 +12,7 @@ Welcome to Diceware Password Generator's documentation!
    author
    purpose
    theory
+   example
    api
    license
    references
