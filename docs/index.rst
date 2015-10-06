@@ -6,8 +6,6 @@
 Welcome to Diceware Password Generator's documentation!
 =======================================================
 
-Contents:
-
 .. toctree::
    :maxdepth: 2
 
@@ -16,12 +14,3 @@ Contents:
    theory
    api
    license
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
