@@ -1,5 +1,5 @@
 ### Diceware-Password-Generator ###
-This repository contains a module, generator.py, which generates Diceware passwords using a cryptographically secure random number generator.
+This repository contains a module called generator.py, which generates Diceware passwords using a cryptographically secure random number generator.
 
 #### Requirements ####
 This module was written in python3 and on Ubuntu 15.04, so I recommend you run the module in that environment. The entropy generation is a combined effort from `/dev/random` and the package `haveged`. Thus, if you find a way to change those specific lines of code to work on another OS, it should work.
@@ -40,3 +40,6 @@ My personal preference is to use a open source utility called GNU Privacy Guard 
 
 #### NOTE ####
 The method of generating the passphrases in this module does not strictly adhere to the method of Diceware. In Diceware password generation, 5 numbers ranging from 1 to 6 are randomly generated and concatenated. The resulting 5-digit number is a kind of 'key' in a key-value pair, where the 'value' is a word selected from a word list. Each word in a Diceware password is generated this way. In my implementation, I randomly generate a 5-digit number, which acts as a 'key', and select the corresponding 'value' or word. Each word in my solution is generated this way.
+
+#### License ####
+The project is licensed under the MIT license.
