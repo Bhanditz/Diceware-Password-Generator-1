@@ -9,4 +9,4 @@ The reason this is true is because in choosing passwords, length is perhaps a mo
 
 The comic is displayed below:
 
-.. image:: http://imgs.xkcd.com/comics/password_strength.png
+.. image:: password_strength.png
