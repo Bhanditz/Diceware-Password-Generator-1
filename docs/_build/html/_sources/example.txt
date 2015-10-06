@@ -1,5 +1,5 @@
-An Example of Use
-=================
+IV. An Example of Use
+=====================
 
 **The following is simulated shell session:**::
 

@@ -1,5 +1,5 @@
-IV. Diceware Password Generator API Reference
-=============================================
+V. Diceware Password Generator API Reference
+============================================
 
 .. automodule:: src
    :members:

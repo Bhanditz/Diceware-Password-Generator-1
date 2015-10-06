@@ -1,5 +1,5 @@
-V. License
-==========
+VI. License
+===========
 
 The MIT License (MIT)
 
