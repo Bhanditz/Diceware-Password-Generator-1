@@ -1,7 +1,7 @@
 An Example of Use
 =================
 
-**The following is simulated shell session:**
+**The following is simulated shell session:**::
 
     $ python3 generator.py
     How many Diceware passwords would you like? 5
