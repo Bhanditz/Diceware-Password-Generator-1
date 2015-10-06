@@ -1,2 +1,2 @@
-3. What is Diceware?
-====================
+III. What is Diceware?
+======================
