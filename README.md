@@ -32,3 +32,6 @@ Password 4: tanist elida carbondale isthmian tomorrowness
 Password 5: mangelin cyniatria galvanotaxis liegemen fieberling
 
 ```
+
+#### NOTE ####
+The method of generating the passphrases in this module does not strictly adhere to the method of Diceware. In Diceware password generation, 5 numbers ranging from 1 to 6 are randomly generated and concatenated. The resulting 5-digit number is a kind of 'key' in a key-value pair, where the 'value' is a word selected from a word list. Each word in a Diceware password is generated this way. In my implementation, I randomly generate a 5-digit number, which acts as a 'key', and select the corresponding 'value' or word. Each word in my solution is generated this way.
