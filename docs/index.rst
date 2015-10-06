@@ -7,7 +7,7 @@ Welcome to Diceware Password Generator's documentation!
 =======================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    author
    purpose
