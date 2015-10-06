@@ -134,9 +134,9 @@
             
   <h1>Source code for src.generator</h1><div class="highlight"><pre>
 <span class="c">#!/usr/bin/env python3</span>
-<span class="sd">&quot;&quot;&quot;This python module generates n diceware passwords of length l, where l </span>
-<span class="sd">denotes the number of words in the diceware password.  This module assumes that </span>
-<span class="sd">the &#39;haveged&#39; package is installed on your linux system, as it provides </span>
+<span class="sd">&quot;&quot;&quot;This python module generates n diceware passwords of length l, where l</span>
+<span class="sd">denotes the number of words in the diceware password.  This module assumes that</span>
+<span class="sd">the &#39;haveged&#39; package is installed on your linux system, as it provides</span>
 <span class="sd">excellent entropy.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
@@ -145,30 +145,31 @@
 
 <div class="viewcode-block" id="generate"><a class="viewcode-back" href="../../api.html#src.generator.generate">[docs]</a><span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">l</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;This method prints n diceware passwords of length l.</span>
-<span class="sd">    </span>
+
 <span class="sd">    :param n: the number of generated diceware passwords</span>
 <span class="sd">    :type n: int</span>
 <span class="sd">    :param l: the length of a diceware password</span>
 <span class="sd">    :type l: int</span>
-<span class="sd">    :returns: prints to the console n diceware passwords of length l </span>
+<span class="sd">    :returns: prints to the console n diceware passwords of length l</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Password {0}:</span><span class="se">\t</span><span class="s">{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">password</span><span class="p">(</span><span class="n">l</span><span class="p">)))</span> 
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Password {0}:</span><span class="se">\t</span><span class="s">{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">password</span><span class="p">(</span><span class="n">l</span><span class="p">)))</span>
+
 </div>
 <div class="viewcode-block" id="password"><a class="viewcode-back" href="../../api.html#src.generator.password">[docs]</a><span class="k">def</span> <span class="nf">password</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;This method returns a diceware password string of l words.</span>
-<span class="sd">    </span>
-<span class="sd">    This method samples cryptographically secure random integers using the </span>
-<span class="sd">    linux coreutils shuf package.  One of the requirements for this module is </span>
-<span class="sd">    that the haveged package is installed as it allows /dev/random&#39;s entropy </span>
+
+<span class="sd">    This method samples cryptographically secure random integers using the</span>
+<span class="sd">    linux coreutils shuf package.  One of the requirements for this module is</span>
+<span class="sd">    that the haveged package is installed as it allows /dev/random&#39;s entropy</span>
 <span class="sd">    pool to never dip below ~1024 bits.</span>
 
 <span class="sd">    :param l: the length of a diceware password</span>
 <span class="sd">    :type l: int</span>
 <span class="sd">    :returns: str representing a diceware password of length l</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c"># The {0} is substituted with the number of words in the wordlist (but -1 </span>
-    <span class="c"># because we start counting from 0).  And the {1} is substituted with l, or </span>
+    <span class="c"># The {0} is substituted with the number of words in the wordlist (but -1</span>
+    <span class="c"># because we start counting from 0).  And the {1} is substituted with l, or</span>
     <span class="c"># the number of words needed in the diceware password.</span>
     <span class="n">system</span><span class="p">(</span><span class="s">&#39;shuf --input-range=0-{0} --random-source=/dev/random </span><span class="se">\</span>
 <span class="s">            --head-count={1} --output=numbers.txt&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">LENGTH</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">l</span><span class="p">))</span>

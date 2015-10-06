@@ -140,9 +140,9 @@
 <span id="v-diceware-password-generator-api-reference"></span><h1>V. Diceware Password Generator API Reference<a class="headerlink" href="#module-src" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="module-src.generator">
 <span id="the-generator-module"></span><h2>The &#8220;generator&#8221; module<a class="headerlink" href="#module-src.generator" title="Permalink to this headline">¶</a></h2>
-<p>This python module generates n diceware passwords of length l, where l 
-denotes the number of words in the diceware password.  This module assumes that 
-the &#8216;haveged&#8217; package is installed on your linux system, as it provides 
+<p>This python module generates n diceware passwords of length l, where l
+denotes the number of words in the diceware password.  This module assumes that
+the &#8216;haveged&#8217; package is installed on your linux system, as it provides
 excellent entropy.</p>
 <dl class="function">
 <dt id="src.generator.generate">
@@ -169,9 +169,9 @@ excellent entropy.</p>
 <dt id="src.generator.password">
 <code class="descclassname">src.generator.</code><code class="descname">password</code><span class="sig-paren">(</span><em>l</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/generator.html#password"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.generator.password" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method returns a diceware password string of l words.</p>
-<p>This method samples cryptographically secure random integers using the 
-linux coreutils shuf package.  One of the requirements for this module is 
-that the haveged package is installed as it allows /dev/random&#8217;s entropy 
+<p>This method samples cryptographically secure random integers using the
+linux coreutils shuf package.  One of the requirements for this module is
+that the haveged package is installed as it allows /dev/random&#8217;s entropy
 pool to never dip below ~1024 bits.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
