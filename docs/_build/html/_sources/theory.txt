@@ -1,2 +1,2 @@
-Diceware Password Strength
-==========================
+3. What is Diceware?
+====================
