@@ -15,7 +15,7 @@ Inside `/etc/default/haveged`, make sure the following line is present:
 
 And finally, to make sure `haveged` is configured to start on boot, run the following command in terminal:
 ```
-$ update-rc.d haveged defaults
+$ sudo update-rc.d haveged defaults
 ```
  - Download the repository and unzip.
 
