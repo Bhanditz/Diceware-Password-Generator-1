@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """This python module generates n diceware passwords of length l, where l
 denotes the number of words in the diceware password.  This module assumes that
 the 'haveged' package is installed on your linux system, as it provides
@@ -18,7 +18,7 @@ def generate(n, l):
     :returns: prints to the console n diceware passwords of length l
     """
     for i in range(n):
-        print "Password {0}:\t{1}".format(i + 1, password(l))
+        print("Password {0}:\t{1}".format(i + 1, password(l)))
 
 
 def password(l):
