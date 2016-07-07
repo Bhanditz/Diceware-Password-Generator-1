@@ -1,47 +1,47 @@
 #!/usr/bin/env python3
-"""This python module generates n diceware passwords of length l, where l
-denotes the number of words in the diceware password. The module uses a
-cryptographically secure PRNG from the new python module 'secrets'. This
-module assumes Python 3.6.
+"""This program generates n Diceware passphrases of length k, where k
+denotes the number of words in each passphrase. It uses a CSPRNG
+from the 'secrets' module. It assumes Python 3.6+ is installed.
 """
 
-import secrets
+from secrets import randbelow as nextInt
 
 
-def generate(n, l):
-    """This method prints n diceware passwords of length l.
+def generate(n, k):
+    """This method prints n Diceware passphrases of length k words each.
 
-    :param n: the number of generated diceware passwords
-    :param l: the length of a diceware password
-    :returns: prints to the console n diceware passwords of length l
+    :param n: the number of Diceware passphrases
+    :param k: the number of words in each passphrase
     """
     for i in range(n):
-        print("Password {0}:\t{1}".format(i + 1, password(l)))
+        print("Password {0}:\t{1}".format(i + 1, passphrase(k)))
 
 
-def password(l):
-    """This method returns a diceware password string of l words.
+def passphrase(k):
+    """This method returns a Diceware passphrase of length k words.
 
-    This method samples cryptographically secure random integers using the
-    new 'secrets' module from Python 3.6.
-
-    :param l: the length of a diceware password
-    :returns: str representing a diceware password of length l
+    :param k: the length of a Diceware passphrase
     """
-
     passphrase = ""
-    for i in range(l):
-        passphrase += WORDLIST[secrets.randbelow(LENGTH)] + " "
+    for i in range(k):
+        passphrase += word() + " "
     return passphrase
 
 
+def word():
+    """
+    This method returns a random word from the wordlist.
+    """
+    return wordlist[nextInt(numberOfWords)]
+
+
 if __name__ == '__main__':
+    wordlist = open('words.txt').read().split('\n')[:-1]
+    numberOfWords = len(wordlist)
+    
     n = int(input("How many Diceware passwords would you like? "))
-    l = int(input("How many words should be in each Diceware password? "))
+    k = int(input("How many words should be in each password? "))
+    
     print()
-
-    WORDLIST = open('words.txt').read().split('\n')[:-1]
-    LENGTH = len(WORDLIST)
-
-    generate(n, l)
+    generate(n, k)
     print()
