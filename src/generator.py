@@ -25,7 +25,7 @@ def passphrase(k):
     passphrase = ""
     for i in range(k):
         passphrase += word() + " "
-    return passphrase
+    return passphrase.trim()
 
 
 def word():
