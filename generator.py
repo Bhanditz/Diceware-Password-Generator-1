@@ -8,20 +8,13 @@ from secrets import randbelow as nextInt
 
 
 def generate(n, k):
-    """This method prints n Diceware passphrases of length k words each.
-
-    :param n: the number of Diceware passphrases
-    :param k: the number of words in each passphrase
-    """
+    """Prints n Diceware passphrases of length k words each."""
     for i in range(n):
         print("Password {0}:\t{1}".format(i + 1, passphrase(k)))
 
 
 def passphrase(k):
-    """This method returns a Diceware passphrase of length k words.
-
-    :param k: the length of a Diceware passphrase
-    """
+    """Returns a Diceware passphrase of length k words."""
     passphrase = ""
     for i in range(k):
         passphrase += word() + " "
@@ -29,9 +22,7 @@ def passphrase(k):
 
 
 def word():
-    """
-    This method returns a random word from the wordlist.
-    """
+    """Returns a random word from the word list."""
     return wordlist[nextInt(numberOfWords)]
 
 
